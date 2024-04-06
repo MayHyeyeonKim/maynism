@@ -8,10 +8,10 @@ class App extends Component {
   }
 
   onFileChange = event => {
-    this.setState({selectedFile: event.target.file[0]});
+    this.setState({selectedFile: event.target.files[0]});
   }
 
-  ononFileUpload = () => {
+  onFileUpload = () => {
     const formData = new FormData();
     formData.append(
       "demo file",
@@ -60,7 +60,7 @@ class App extends Component {
       <h3>File Upload with React and a a Serverless API!</h3>
       <div>
         <input type="file" onChange={this.onFileChange} />
-        <button onChange={this.onFileUpload}>Upload</button>
+        <button onClick={this.onFileUpload}>Upload</button>
       </div>
       {this.fileData()}
     </div>
