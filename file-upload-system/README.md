@@ -23,7 +23,7 @@ The project is currently operating within the AWS Free Tier limits, which offers
 
 ## Gosh!! My Pain in the buxx (Encountered Errors)
 
-![Error](https://github.com/MayHyeyeonKim/maynism/blob/main/file-upload-system/images/error_log.png)
+![Error-CloudWatch](https://github.com/MayHyeyeonKim/maynism/blob/main/file-upload-system/images/error_log.png)
 
 I spent approximately 6 hours resolving the error shown in the screenshot above. The root cause was a version incompatibility issue with Node.js. The problem was resolved by switching to a lower version of Node.js. A helpful discussion that guided me to the solution can be found on Stack Overflow:
 
