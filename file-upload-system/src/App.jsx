@@ -1,7 +1,6 @@
 import './App.css';
 import React, { Component } from 'react';
 import axios from 'axios';
-import { S3Client } from '@aws-sdk/client-s3';
 
 class App extends Component {
   state = {
