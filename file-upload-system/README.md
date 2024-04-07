@@ -21,7 +21,7 @@ This is a file upload system with a serverless API using AWS Lambda, S3, and Rea
 ## AWS Free Tier Usage
 The project is currently operating within the AWS Free Tier limits, which offers a generous amount of resources without any cost for the first 12 months of a new AWS account.
 
-## Gosh!! My Pain in the buxx (Encountered Errors)
+## Gosh!! My Pain in the buxx (Encountered Errors - CloudWatch)
 
 ![Error-CloudWatch](https://github.com/MayHyeyeonKim/maynism/blob/main/file-upload-system/images/error_log.png)
 
