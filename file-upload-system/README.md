@@ -21,6 +21,15 @@ This project is built on a Serverless architecture using AWS Lambda.
 ## AWS Free Tier Usage
 The project is currently operating within the AWS Free Tier limits, which offers a generous amount of resources without any cost for the first 12 months of a new AWS account.
 
+## Gosh!! My Pain in the buxx (Encountered Errors)
+
+![Error](https://github.com/MayHyeyeonKim/maynism/blob/main/images/error_log.png)
+
+I spent approximately 6 hours resolving the error shown in the screenshot above. The root cause was a version incompatibility issue with Node.js. The problem was resolved by switching to a lower version of Node.js. A helpful discussion that guided me to the solution can be found on Stack Overflow:
+
+[Stack Overflow Discussion on AWS Lambda and `aws-sdk` Module Error](https://stackoverflow.com/questions/74792293/aws-lambda-cannot-find-module-aws-sdk-in-build-a-basic-web-application-tutoria)
+
+
 ## Lambda Function Handler (node v16)
 
 Below are the Lambda function handlers for Maynism. The handlers listen for incoming events and invoke the appropriate functions based on the HTTP method and the path.
@@ -90,4 +99,5 @@ function buildResponse(statusCode, body){
 module.exports = { buildResponse };
 
 ```
+
 
