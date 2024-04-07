@@ -1,5 +1,7 @@
-import React, { Component } from 'react';
 import './App.css';
+import React, { Component } from 'react';
+import axios from 'axios';
+import { S3Client } from '@aws-sdk/client-s3';
 
 class App extends Component {
   state = {
@@ -19,9 +21,10 @@ class App extends Component {
       this.state.selectedFile.name
     )
       //call api
-      console.log(formData);
-      this.setState({selectedFile: null});
-      this.setState({fileUploadedSuccessfully:true});
+      axios.post("https://tgjnaxc8s9.execute-api.us-east-2.amazonaws.com/prod/file-upload", formData).then(() => {
+      this.setState({ selectedFile: null });
+      this.setState({ fileUploadedSuccessfully: true });
+    })
   }
 
   fileData = () => {
@@ -58,10 +61,8 @@ class App extends Component {
       <div className="container">
       <h2>Maynism File Upload System</h2>
       <h3>File Upload with React and a a Serverless API!</h3>
-      <div>
-        <input type="file" onChange={this.onFileChange} />
-        <button onClick={this.onFileUpload}>Upload</button>
-      </div>
+      <input type="file" onChange={this.onFileChange} />
+      <button onClick={this.onFileUpload}>Upload</button>
       {this.fileData()}
     </div>
     )
