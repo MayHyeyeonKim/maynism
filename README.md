@@ -1,5 +1,5 @@
 # Serverless Project : MAYNISM
-This project is built on a Serverless architecture using AWS Lambda.
+This project consists of file upload systems, each implemented as a serverless API using AWS Lambda, S3, DynamoDB, and React for the client interfaces.
 
 ## Architecture
 ![Serverless Architecture Diagram](https://github.com/MayHyeyeonKim/maynism/blob/main/file-upload-system/images/serverless_architecture.png)
